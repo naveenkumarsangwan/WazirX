@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeColor"
+    tools:context=".CryptoDetailedActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Crypto Details"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toTopOf="@+id/view_symbol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/view_symbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="symbol"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/card1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:ignore="HardcodedText" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5ssp"
+        app:cardBackgroundColor="@color/cardColor"
+        app:cardCornerRadius="@dimen/_10ssp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/card2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_symbol">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10ssp">
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:paddingStart="@dimen/_10ssp"
+                android:text="Volume"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view_volume"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/view_volume"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="right"
+                android:paddingRight="@dimen/_10ssp"
+                android:text="volume_int"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5ssp"
+        app:cardBackgroundColor="@color/cardColor"
+        app:cardCornerRadius="@dimen/_10ssp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/card3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card1">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10ssp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25ssp"
+                android:gravity="center_horizontal"
+                android:text="Asset"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="Base Asset"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/view_baseasset"
+                app:layout_constraintEnd_toStartOf="@+id/tv5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/view_baseasset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="base asset name"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view_quoteasset"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv4"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="Quote Asset"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/view_quoteasset"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv4"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/view_quoteasset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="quote asset name"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view_baseasset"
+                app:layout_constraintTop_toBottomOf="@+id/tv5"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10ssp"
+        app:cardBackgroundColor="@color/cardColor"
+        app:cardCornerRadius="@dimen/_15ssp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card2">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10ssp">
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="Price"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="@dimen/_5ssp"
+                android:text="Open Price"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintEnd_toStartOf="@+id/view_openprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv6"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/view_openprice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingEnd="@dimen/_10ssp"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/view_highprice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv7"
+                app:layout_constraintTop_toBottomOf="@+id/tv6"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingStart="@dimen/_5ssp"
+                android:text="High Price"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/view_highprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv7"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/view_highprice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingEnd="@dimen/_10ssp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/view_lowprice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/view_openprice"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingStart="@dimen/_5ssp"
+                android:text="Low Price"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toStartOf="@+id/view_lowprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/view_lowprice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingEnd="@dimen/_10ssp"
+                android:textColor="@color/green"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/view_lastprice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/view_highprice"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingStart="@dimen/_5ssp"
+                android:text="Last Price"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view_lastprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/view_lastprice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingEnd="@dimen/_10ssp"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/view_lowprice"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
